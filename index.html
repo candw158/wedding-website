@@ -192,73 +192,158 @@
   </section>
 
   <!-- ---------- Weekend Schedule ---------- -->
-  <section id="schedule">
-    <h2>Weekend Schedule</h2>
+<section class="weekend-schedule">
+  <h2>Weekend Schedule</h2>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Friday</h3>
-        <p>Arrival and informal drinks in the evening.</p>
-      </div>
+  <!-- Friday -->
+  <div class="schedule-day">
+    <h3>Friday – Arrival & Welcome</h3>
+    <ul>
+      <li>
+        <span class="time">3:00 pm</span>
+        <span class="activity">Guest arrivals & check-in</span>
+      </li>
+      <li>
+        <span class="time">6:00 pm</span>
+        <span class="activity">Drinks in the courtyard</span>
+      </li>
+      <li>
+        <span class="time">7:30 pm</span>
+        <span class="activity">Informal supper & catching up</span>
+      </li>
+    </ul>
+  </div>
 
-      <div class="card">
-        <h3>Saturday</h3>
-        <p>
-          Ceremony, wedding breakfast, and evening party.
-          Full timings to follow.
-        </p>
-      </div>
+  <!-- Saturday -->
+  <div class="schedule-day">
+    <h3>Saturday – Wedding Day</h3>
+    <ul>
+      <li>
+        <span class="time">9:00 am</span>
+        <span class="activity">Breakfast for overnight guests</span>
+      </li>
+      <li>
+        <span class="time">12:30 pm</span>
+        <span class="activity">Guests arrive at the orchard</span>
+      </li>
+      <li>
+        <span class="time">1:00 pm</span>
+        <span class="activity">Ceremony</span>
+      </li>
+      <li>
+        <span class="time">2:00 pm</span>
+        <span class="activity">Drinks reception & photos</span>
+      </li>
+      <li>
+        <span class="time">4:00 pm</span>
+        <span class="activity">Wedding breakfast</span>
+      </li>
+      <li>
+        <span class="time">7:30 pm</span>
+        <span class="activity">Evening party & dancing</span>
+      </li>
+    </ul>
+  </div>
 
-      <div class="card">
-        <h3>Sunday</h3>
-        <p>Breakfast and relaxed goodbyes.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Sunday -->
+  <div class="schedule-day">
+    <h3>Sunday – Farewell</h3>
+    <ul>
+      <li>
+        <span class="time">9:30 am</span>
+        <span class="activity">Coffee & pastries</span>
+      </li>
+      <li>
+        <span class="time">11:00 am</span>
+        <span class="activity">Optional walk / relaxed catch-up</span>
+      </li>
+      <li>
+        <span class="time">1:00 pm</span>
+        <span class="activity">Departures</span>
+      </li>
+    </ul>
+  </div>
+</section>
 
-  <!-- ---------- Venue ---------- -->
-  <section id="venue">
-    <h2>The Venue</h2>
-    <p>
-      Our wedding will take place at Drovers Rest in Herefordshire.
-      The ceremony will be held in the orchard, followed by the
-      wedding breakfast in the barn and an evening party in the
-      rustic barn with a courtyard bar.
-    </p>
-  </section>
+<!-- ---------- Rustic Styling CSS ---------- -->
+<style>
+  .weekend-schedule {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem 1rem;
+    background: #fdfaf4;
+    border: 2px solid #e4e0d8;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    font-family: 'Georgia', serif;
+    color: #3f4f45;
+  }
 
-  <!-- ---------- Accommodation ---------- -->
-  <section id="stay">
-    <h2>Accommodation</h2>
+  .weekend-schedule h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #5b6a5d;
+    position: relative;
+  }
 
-    <div class="cards">
-      <div class="card">
-        <h3>Cottages</h3>
-        <p>On-site cottages for close family and friends.</p>
-      </div>
+  .weekend-schedule h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #a7b3a5;
+    margin: 0.5rem auto 0;
+  }
 
-      <div class="card">
-        <h3>Safari Tents</h3>
-        <p>Located near the rustic barn for easy access to the party.</p>
-      </div>
+  .schedule-day {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f7f3ec;
+    border-left: 4px solid #a7b3a5;
+    border-radius: 4px;
+  }
 
-      <div class="card">
-        <h3>Bell Tents</h3>
-        <p>Set near the orchard for a relaxed countryside feel.</p>
-      </div>
-    </div>
-  </section>
+  .schedule-day h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #d1cfc5;
+    padding-bottom: 0.5rem;
+    color: #4a5a4f;
+  }
 
-  <!-- ---------- RSVP ---------- -->
-  <section id="rsvp">
-    <h2>RSVP</h2>
-    <p>
-      Please let us know if you can attend by completing the RSVP form.
-    </p>
-    <p>
-      (Link to your RSVP form will go here.)
-    </p>
-  </section>
+  .schedule-day ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .schedule-day li {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    align-items: baseline;
+  }
+
+  .time {
+    font-weight: bold;
+    min-width: 80px;
+    color: #6b7a6f;
+  }
+
+  .activity {
+    flex: 1;
+  }
+
+  /* Mobile-friendly tweaks */
+  @media (min-width: 768px) {
+    .schedule-day {
+      padding: 1.5rem;
+    }
+    .schedule-day li {
+      gap: 1.5rem;
+    }
+  }
+</style>
 
   <!-- ---------- Footer ---------- -->
   <footer>
