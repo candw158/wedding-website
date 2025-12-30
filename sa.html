@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nika & Chris – SA Wedding</title>
+
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2f2f2f;
+      background-color: #fcf9f3;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f1efe7;
+      text-align: center;
+      padding: 4rem 1.5rem;
+      color: #3f4f45;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    nav {
+      background: #e6e2d9;
+      border-bottom: 2px solid #c7bfae;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a5a4f;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #2f3a2f;
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #4a5a4f;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #a37c4e;
+      margin: 1rem auto 0;
+    }
+
+    /* ---------- Vineyard Rustic Schedule ---------- */
+    .weekend-schedule {
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+      padding: 2rem 1rem;
+      background: #faf5f0;
+      border: 2px solid #d6cfc1;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      color: #3f4f45;
+    }
+
+    .schedule-day {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: #f6f1e7;
+      border-left: 5px solid #a37c4e;
+      border-radius: 4px;
+    }
+
+    .schedule-day h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed #c7bfae;
+      padding-bottom: 0.5rem;
+      color: #3f4f45;
+    }
+
+    .schedule-day ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .schedule-day li {
+      display: flex;
+      gap: 1rem;
+      margin: 0.5rem 0;
+      align-items: baseline;
+    }
+
+    .time {
+      font-weight: bold;
+      min-width: 80px;
+      color: #6b7a6f;
+    }
+
+    .activity {
+      flex: 1;
+    }
+
+    /* Mobile tweaks */
+    @media (min-width: 768px) {
+      nav ul {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .schedule-day {
+        padding: 1.5rem;
+      }
+      .schedule-day li {
+        gap: 1.5rem;
+      }
+    }
+
+    footer {
+      background: #4a5a4f;
+      color: #fdfaf4;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Nika & Chris</h1>
+    <p>South Africa Wedding · October 31 2026 · Tulbagh</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">UK Wedding</a></li>
+      <li><a href="sa.html">SA Wedding</a></li>
+      <li><a href="#schedule">Weekend</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#stay">Accommodation</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- Welcome -->
+  <section id="welcome">
+    <h2>Welcome</h2>
+    <p>We’re delighted to celebrate our South Africa wedding in beautiful Tulbagh. This page includes all the weekend details including schedule, venue info, and accommodation suggestions.</p>
+  </section>
+
+  <!-- Weekend Schedule -->
+  <section id="schedule" class="weekend-schedule">
+    <h2>Weekend Schedule</h2>
+
+    <!-- Friday -->
+    <div class="schedule-day">
+      <h3>Friday – Arrival & Welcome</h3>
+      <ul>
+        <li><span class="time">3:00 pm</span><span class="activity">Guest arrivals & check-in at lodge</span></li>
+        <li><span class="time">6:00 pm</span><span class="activity">Welcome drinks among the vines</span></li>
+        <li><span class="time">7:30 pm</span><span class="activity">Casual dinner with local wines</span></li>
+      </ul>
+    </div>
+
+    <!-- Saturday -->
+    <div class="schedule-day">
+      <h3>Saturday – Wedding Day</h3>
+      <ul>
+        <li><span class="time">8:30 am</span><span class="activity">Breakfast for overnight guests</span></li>
+        <li><span class="time">12:00 pm</span><span class="activity">Guests arrive at vineyard for ceremony</span></li>
+        <li><span class="time">1:00 pm</span><span class="activity">Ceremony amid the vines</span></li>
+        <li><span class="time">2:00 pm</span><span class="activity">Drinks reception & vineyard photos</span></li>
+        <li><span class="time">4:00 pm</span><span class="activity">Wedding lunch under marquee</span></li>
+        <li><span class="time">7:30 pm</span><span class="activity">Evening celebration & dancing</span></li>
+      </ul>
+    </div>
+
+    <!-- Sunday -->
+    <div class="schedule-day">
+      <h3>Sunday – Farewell</h3>
+      <ul>
+        <li><span class="time">9:00 am</span><span class="activity">Coffee & pastries on terrace</span></li>
+        <li><span class="time">11:00 am</span><span class="activity">Optional vineyard tour / relax</span></li>
+        <li><span class="time">1:00 pm</span><span class="activity">Guest departures</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Venue -->
+  <section id="venue">
+    <h2>The Venue</h2>
+    <p>The wedding will take place at a scenic villa in the Cape Winelands, featuring rolling hills, grapevines, and elegant outdoor spaces perfect for our ceremony and celebrations.</p>
+  </section>
+
+  <!-- Accommodation -->
+  <section id="stay">
+    <h2>Accommodation</h2>
+    <p>Guests can stay at the vineyard lodge or nearby boutique hotels. Detailed booking information will be provided closer to the date.</p>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>Please confirm your attendance using the RSVP form linked here.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>We look forward to celebrating with you among the vineyards in South Africa 🍇🍷</p>
+  </footer>
+
+</body>
+</html>
