@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris & Nika – UK Wedding</title>
+
+  <style>
+    /* ---------- Base (mobile first) ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2f2f2f;
+      background-color: #f6f4ef;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background-color: #e4ebe3;
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #4a5a4f;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      background: #faf9f7;
+      border-bottom: 1px solid #d8d5cf;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a5a4f;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #2f2f2f;
+      text-decoration: underline;
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #3f4f45;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #a7b3a5;
+      margin: 1rem auto 0;
+    }
+
+    section p {
+      margin-bottom: 1rem;
+    }
+
+    /* ---------- Cards ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #3f4f45;
+    }
+
+    /* ---------- Hero image ---------- */
+    .hero {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 6px;
+      margin-top: 2rem;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: #3f4f45;
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* ---------- Desktop enhancements ---------- */
+    @media (min-width: 768px) {
+      nav ul {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      header h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ---------- Header ---------- -->
+  <header>
+    <h1>Chris & Nika</h1>
+    <p>UK Wedding · August 15 2026 · Drovers Rest Farm</p>
+
+    <!-- Optional hero image -->
+    
+    <img src="photos/header.jpg" alt="Wedding venue" class="hero">
+    
+  </header>
+
+  <!-- ---------- Navigation ---------- -->
+  <nav>
+    <ul>
+      <li><a href="index.html">UK Wedding</a></li>
+      <li><a href="sa.html">SA Wedding</a></li>
+      <li><a href="#schedule">Weekend</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#stay">Accommodation</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- ---------- Welcome ---------- -->
+  <section id="welcome">
+    <h2>Welcome</h2>
+    <p>
+      We’re so excited to celebrate our wedding with you.
+      This website has all the key details for the weekend —
+      timings, venue information, and where to stay.
+    </p>
+  </section>
+
+  <!-- ---------- Weekend Schedule ---------- -->
+  <section id="schedule">
+    <h2>Weekend Schedule</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Friday</h3>
+        <p>Arrival and informal drinks in the evening.</p>
+      </div>
+
+      <div class="card">
+        <h3>Saturday</h3>
+        <p>
+          Ceremony, wedding breakfast, and evening party.
+          Full timings to follow.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Sunday</h3>
+        <p>Breakfast and relaxed goodbyes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Venue ---------- -->
+  <section id="venue">
+    <h2>The Venue</h2>
+    <p>
+      Our wedding will take place at Drovers Rest in Herefordshire.
+      The ceremony will be held in the orchard, followed by the
+      wedding breakfast in the barn and an evening party in the
+      rustic barn with a courtyard bar.
+    </p>
+  </section>
+
+  <!-- ---------- Accommodation ---------- -->
+  <section id="stay">
+    <h2>Accommodation</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Cottages</h3>
+        <p>On-site cottages for close family and friends.</p>
+      </div>
+
+      <div class="card">
+        <h3>Safari Tents</h3>
+        <p>Located near the rustic barn for easy access to the party.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bell Tents</h3>
+        <p>Set near the orchard for a relaxed countryside feel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- RSVP ---------- -->
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>
+      Please let us know if you can attend by completing the RSVP form.
+    </p>
+    <p>
+      (Link to your RSVP form will go here.)
+    </p>
+  </section>
+
+  <!-- ---------- Footer ---------- -->
+  <footer>
+    <p>We can’t wait to celebrate with you 🤍</p>
+  </footer>
+
+</body>
+</html>
