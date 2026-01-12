@@ -168,6 +168,11 @@
   <header>
     <h1>Nika & Chris</h1>
     <p>South Africa Wedding · October 31 2026 · Tulbagh</p>
+
+    <!-- Optional hero image -->
+    
+    <img src="photos/header2.jpg" alt="Wedding venue" class="hero">
+    
   </header>
 
   <!-- Navigation -->
@@ -198,8 +203,11 @@
       <h3>Saturday – Wedding Day</h3>
       <ul>
         <li><span class="time">12:00 pm</span><span class="activity">Guest arrivals & check-in at villa</span></li>
-        <li><span class="time">6:00 pm</span><span class="activity">Welcome drinks among the vines</span></li>
-        <li><span class="time">7:30 pm</span><span class="activity">Casual dinner with local wines</span></li>
+        <li><span class="time">2:00 pm</span><span class="activity">Ceremony in the garden</span></li>
+        <li><span class="time">2:30 pm</span><span class="activity">Drinks reception & canapes</span></li>
+        <li><span class="time">4:00 pm</span><span class="activity">Wedding breakfast in the courtyard</span></li>
+        <li><span class="time">6:00 pm</span><span class="activity">Speeches</span></li>
+        <li><span class="time">7:00 pm</span><span class="activity">Evening celebration & dancing</span></li>
       </ul>
     </div>
 
@@ -208,11 +216,8 @@
       <h3>Sunday – Braai Time</h3>
       <ul>
         <li><span class="time">8:30 am</span><span class="activity">Breakfast for overnight guests</span></li>
-        <li><span class="time">12:00 pm</span><span class="activity">Guests arrive at vineyard for ceremony</span></li>
-        <li><span class="time">1:00 pm</span><span class="activity">Ceremony amid the vines</span></li>
-        <li><span class="time">2:00 pm</span><span class="activity">Drinks reception & vineyard photos</span></li>
-        <li><span class="time">4:00 pm</span><span class="activity">Wedding lunch under marquee</span></li>
-        <li><span class="time">7:30 pm</span><span class="activity">Evening celebration & dancing</span></li>
+        <li><span class="time">2:00 pm</span><span class="activity">Braai</span></li>
+        <li><span class="time">4:00 pm</span><span class="activity">Afternoon drinks and cocktails</span></li>
       </ul>
     </div>
 
@@ -221,8 +226,7 @@
       <h3>Monday – Farewell</h3>
       <ul>
         <li><span class="time">9:00 am</span><span class="activity">Coffee & pastries on terrace</span></li>
-        <li><span class="time">11:00 am</span><span class="activity">Optional vineyard tour / relax</span></li>
-        <li><span class="time">1:00 pm</span><span class="activity">Guest departures</span></li>
+        <li><span class="time">11:00 am</span><span class="activity">Departure for Stellenbosch</span></li>
       </ul>
     </div>
   </section>
@@ -232,9 +236,9 @@
   <h2>The Venue</h2>
 
   <div class="venue-gallery">
-    <img src="images/sa-venue1.jpg" alt="Beautiful Villa">
-    <img src="images/sa-venue2.jpg" alt="Ceremony Spot">
-    <img src="images/sa-venue3.jpg" alt="Aerial View">
+    <img src="photos/sa-venue1.jpg" alt="Beautiful Villa">
+    <img src="photos/sa-venue2.jpg" alt="Ceremony Spot">
+    <img src="photos/sa-venue3.jpg" alt="Aerial View">
   </div>
 
   <p>
@@ -249,7 +253,7 @@
   <div class="accommodation-grid">
 
     <div class="accommodation-card">
-      <img src="images/sa-onsite.jpg" alt="Onsite accommodation">
+      <img src="photos/sa-onsite.jpg" alt="Onsite accommodation">
       <h3>On-site Accommodation</h3>
       <p>
         There are a number of rooms in the villa which will be allocated to immediate family and those who have travelled a long way to join us.
@@ -257,7 +261,7 @@
     </div>
 
     <div class="accommodation-card">
-      <img src="images/sa-hotels.jpg" alt="Local hotels near the villa">
+      <img src="photos/sa-hotels.jpg" alt="Local hotels near the villa">
       <h3>Local Hotels</h3>
       <p>
         There are many excellent boutique hotels and guesthouses nearby
@@ -362,6 +366,190 @@
   <footer>
     <p>We look forward to celebrating with you among the winelands in South Africa 🍇🍷</p>
   </footer>
+
+  <!-- ---------- Rustic Styling CSS ---------- -->
+<style>
+  .weekend-schedule {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem 1rem;
+    background: #fdfaf4;
+    border: 2px solid #e4e0d8;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    font-family: 'Georgia', serif;
+    color: #3f4f45;
+  }
+
+  .weekend-schedule h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #5b6a5d;
+    position: relative;
+  }
+
+  .weekend-schedule h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #a7b3a5;
+    margin: 0.5rem auto 0;
+  }
+
+  .schedule-day {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f7f3ec;
+    border-left: 4px solid #a7b3a5;
+    border-radius: 4px;
+  }
+
+  .schedule-day h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #d1cfc5;
+    padding-bottom: 0.5rem;
+    color: #4a5a4f;
+  }
+
+  .schedule-day ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .schedule-day li {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    align-items: baseline;
+  }
+
+  .time {
+    font-weight: bold;
+    min-width: 80px;
+    color: #6b7a6f;
+  }
+
+  .activity {
+    flex: 1;
+  }
+
+  /* Venue Image Slider */
+  .venue-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    }
+
+    .venue-gallery img {
+        flex: 0 0 85%;
+        max-width: 85%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 8px;
+        scroll-snap-align: center;
+        }
+
+/* Desktop Adjustment for venue slider*/
+@media (min-width: 768px) {
+    .venue-gallery img {
+        flex: 0 0 30%;
+        max-width: 30%;
+        height: 280px;
+        }
+        }
+
+/* ---------- Accommodation cards ---------- */
+.accommodation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.accommodation-card {
+  background: #fdfaf4;
+  border: 2px solid #e4e0d8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.accommodation-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.accommodation-card h3 {
+  margin: 1rem;
+  color: #4a5a4f;
+}
+
+.accommodation-card p {
+  margin: 0 1rem 1.5rem;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .accommodation-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- FAQ accordion ---------- */
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-list details {
+  background: #fdfaf4;
+  border: 2px solid #e4e0d8;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.faq-list summary {
+  font-weight: bold;
+  color: #4a5a4f;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  float: right;
+  font-weight: bold;
+}
+
+.faq-list details[open] summary::after {
+  content: "–";
+}
+
+.faq-list p {
+  margin-top: 1rem;
+  color: #3f4f45;
+}
+
+  /* Mobile-friendly tweaks */
+  @media (min-width: 768px) {
+    .schedule-day {
+      padding: 1.5rem;
+    }
+    .schedule-day li {
+      gap: 1.5rem;
+    }
+  }
+</style>
 
 </body>
 </html>
