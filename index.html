@@ -272,26 +272,34 @@
     <p>
       Our wedding will take place at Drovers Rest Farm near to Hay on Wye. It is a beautiful venue and we can't wait to spend the weekend with you all (and the alpacas).</table>
     </p>
+    <div class=""venue-gallery">
+    <img src="photos/venue1.jpg" alt="Aerial View">
+    <img src="photos/venue2.jpg" alt="Flowers">
+    <img src="photos/venue3.jpg" alt="Courtyard Bar">
+    </div>
   </section>
 
   <!-- ---------- Accommodation ---------- -->
   <section id="stay">
     <h2>Accommodation</h2>
 
-    <div class="cards">
-      <div class="card">
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
         <h3>Cottages</h3>
-        <p>On-site cottages for close family and friends.</p>
+        <img src="photos/cottage.jpg" alt="Cottages">
+        <p>On-site cottages for our wedding investors.</p>
       </div>
 
-      <div class="card">
+      <div class="accommodation-card">
         <h3>Safari Tents</h3>
+        <img src="photos/safari-tent.jpg" alt="Safari Tents">
         <p>There are 6 amazing safari tents which each sleep 4 people. Located near the rustic barn for easy access to the party.</p>
       </div>
 
-      <div class="card">
+      <div class="accommodation-card">
         <h3>Bell Tents</h3>
-        <p>Set in a field a short walk away for a relaxed countryside feel.</p>
+        <img src="photos/bell-tent.jpg" alt="Bell Tents">
+        <p>For those looking for glamping summer festival vibes we have 10 Bell Tents situated in a peaceful space by the moor. There are bespoke kitchen, shower and toilet facilities right outside the tents.</p>
       </div>
     </div>
   </section>
@@ -375,6 +383,70 @@
   .activity {
     flex: 1;
   }
+
+  /* Venue Image Slider */
+  .venue-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    }
+
+    .venue-gallery img {
+        flex: 0 0 85%;
+        max-width: 85%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 8px;
+        scroll-snap-align: center;
+        }
+
+/* Desktop Adjustment for venue slider*/
+@media (min-width: 768px) {
+    .venue-gallery img {
+        flex: 0 0 30%;
+        max-width: 30%;
+        height: 280px;
+        }
+        }
+
+/* ---------- Accommodation cards ---------- */
+.accommodation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.accommodation-card {
+  background: #fdfaf4;
+  border: 2px solid #e4e0d8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.accommodation-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.accommodation-card h3 {
+  margin: 1rem;
+  color: #4a5a4f;
+}
+
+.accommodation-card p {
+  margin: 0 1rem 1.5rem;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .accommodation-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
   /* Mobile-friendly tweaks */
   @media (min-width: 768px) {
