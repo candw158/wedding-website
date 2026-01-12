@@ -173,11 +173,12 @@
   <nav>
     <ul>
       <li><a href="index.html">UK Wedding</a></li>
-      <li><a href="sa.html">SA Wedding</a></li>
       <li><a href="#schedule">Weekend</a></li>
       <li><a href="#venue">Venue</a></li>
       <li><a href="#stay">Accommodation</a></li>
+       <li><a href="#faqs">FAQs</a></li>
       <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="sa.html">SA Wedding</a></li>
     </ul>
   </nav>
 
@@ -303,6 +304,98 @@
       </div>
     </div>
   </section>
+
+  <!-- ---------- FAQs ---------- -->
+  <section id="faqs">
+  <h2>FAQs</h2>
+
+  <div class="faq-list">
+
+    <details>
+      <summary>What should I wear?</summary>
+      <p>
+        We want people to feel comfortable and relaxed at our wedding. We ask for smart-casual for those in attendance on the Friday
+        and something a more formal for the wedding day. Chris will be wearing a beige suit and the Bridesmaids will be wearing X so please dodge these colours if at all possible. As a precaution against guests wearing white, the groomsmen may be given a red wine water pistol.
+      </p>
+    </details>
+
+    <details>
+      <summary>What time should I arrive?</summary>
+      <p>
+        For those coming on Friday please arrive between 3pm and 3:30pm. For those coming on Saturday, please arrive for 12:30pm in the Courtyard.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is there parking at the venue?</summary>
+      <p>
+        There is plenty of parking available at the venue. Please note that the parking is around a 10-minute walk from the Bell Tents so pack light or bring a trolley!
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I get to the venue?</summary>
+      <p>
+        The venue location can be found on <a href="https://maps.app.goo.gl/J2FUxmZ8y52kNPmZ8" target="_blank" rel="noopener">
+            Drovers Rest Farm
+        </a>
+        We are hoping to have smily helpers in place to guide you to the best spot in the car park.
+      </p>
+    </details>
+
+    <details>
+      <summary>What happens if it rains?</summary>
+      <p>
+        We get wet. In all seriousness, we have a well thought-through wet weather plan so the show will go on whatever the weather. If the forecast is wet, do bring wellies if you are in the tents.
+      </p>
+    </details>
+
+    <details>
+      <summary>Are children welcome?</summary>
+      <p>
+        As much as we love your little ones, this wedding is an adult-only affair. If this is going to cause you big issues then please do let us know at the earliest opportunity and we can try and figure out a solution. The same applies to dogs, horses and any other pets.
+      </p>
+    </details>
+
+     <details>
+      <summary>Can I bring a plus one?</summary>
+      <p>
+        The short answer is no. It is really important to us that we know everybody there on our wedding day so we will be naming all of the invited guests on the invites.
+      </p>
+    </details>
+
+    <details>
+      <summary>Will food and drinks be provided?</summary>
+      <p>
+        The all important question. We will be providing: evening meal (Friday), items for self-cooked breakfast (Saturday), Wedding Breakfast (Saturday), Late-Night Food (Saturday) and Fire-cooked Breakfast (Sunday). We encourage all hungry guests to bring additional snacks and soft drinks.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I bring alcohol?</summary>
+      <p>
+        No! It is an important part of our agreement with the venue that only alcohol purchased on the premises can be consumed. Any breaches of this may result in the wedding being cancelled. There is a cash bar that will be open throughout the weekend with a wide selection of beers/ciders and a great selection of South African wines.
+      </p>
+    </details>
+
+    <details>
+      <summary>Do you have a gift registry?</summary>
+      <p>
+        Your presence at our special day is a gift in itself. If you do wish to give something then a contribution to our honeymoon would mean the world to us.
+      </p>
+    </details>
+
+    <details>
+      <summary>What if I have any other questions?</summary>
+      <p>
+        For any other questions please just drop us a text or email us at <a href="mailto:chrisandnikawedding@gmail.com"> chrisandnikawedding@gmail.com
+
+        </a>
+      </p>
+    </details>
+
+  </div>
+</section>
 
   <!-- ---------- RSVP ---------- -->
   <section id="rsvp">
@@ -446,6 +539,46 @@
   .accommodation-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* ---------- FAQ accordion ---------- */
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-list details {
+  background: #fdfaf4;
+  border: 2px solid #e4e0d8;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.faq-list summary {
+  font-weight: bold;
+  color: #4a5a4f;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  float: right;
+  font-weight: bold;
+}
+
+.faq-list details[open] summary::after {
+  content: "–";
+}
+
+.faq-list p {
+  margin-top: 1rem;
+  color: #3f4f45;
 }
 
   /* Mobile-friendly tweaks */
