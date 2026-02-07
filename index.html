@@ -2,264 +2,680 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Wedding – UK</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris & Nika – UK Wedding</title>
 
   <style>
-    /* ---------- GLOBAL ---------- */
-    body {
+    /* ---------- Base (mobile first) ---------- */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: "Georgia", serif;
-      background: #f7f5f2;
-      color: #3e3e3e;
-      line-height: 1.6;
+      padding: 0;
     }
 
-    h1, h2, h3 {
-      font-family: "Palatino Linotype", serif;
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2f2f2f;
+      background-color: #f6f4ef;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background-color: #e4ebe3;
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
       color: #4a5a4f;
     }
 
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      scroll-margin-top: 80px;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 6px;
-    }
-
-    /* ---------- HEADER ---------- */
-    header {
-      text-align: center;
-      padding: 2rem 1.5rem 2.5rem;
-    }
-
-    .hero {
-      display: block;
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      object-position: center top;
-      margin: 1.5rem auto 0;
-      border-radius: 6px;
-    }
-
-    @media (min-width: 768px) {
-      .hero {
-        max-width: 900px;
-        height: 280px;
-      }
-    }
-
-    /* ---------- NAV ---------- */
+    /* ---------- Navigation ---------- */
     nav {
+      background: #faf9f7;
+      border-bottom: 1px solid #d8d5cf;
       position: sticky;
       top: 0;
-      background: #f7f5f2;
-      border-bottom: 1px solid #ddd;
-      z-index: 1000;
+      z-index: 10;
     }
 
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0.75rem 1rem;
       display: flex;
-      justify-content: flex-end;
-      gap: 1.5rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
     }
 
     nav a {
       text-decoration: none;
       color: #4a5a4f;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     nav a:hover {
+      color: #2f2f2f;
       text-decoration: underline;
     }
 
-    /* ---------- VENUE SLIDER ---------- */
-    .slider {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 1rem;
+    /* Hide the checkbox itself */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon - hidden on desktop */
+.menu-icon {
+  display: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  color: #4a5a4f; /* rustic dark green/brown color */
+}
+
+/* Menu styles */
+nav .menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fdfaf4; /* rustic cream */
+    padding-top: 4rem;   /* space for hamburger */
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  nav .menu li {
+    margin: 0;
+  }
+
+  nav .menu li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #4a5a4f; /* rustic dark color */
+  }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked + .menu-icon + nav .menu {
+    display: flex;
+  }
+}
+
+    /* ---------- Sections ---------- */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
     }
 
-    .slider img {
-      flex: 0 0 80%;
-      scroll-snap-align: center;
+    section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #3f4f45;
+      position: relative;
     }
 
-    @media (min-width: 768px) {
-      .slider img {
-        flex: 0 0 30%;
-      }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #a7b3a5;
+      margin: 1rem auto 0;
     }
 
-    /* ---------- ACCOMMODATION ---------- */
-    .accommodation {
+    section p {
+      margin-bottom: 1rem;
+    }
+
+    /* ---------- Cards ---------- */
+    .cards {
       display: grid;
+      grid-template-columns: 1fr;
       gap: 2rem;
+      margin-top: 2rem;
     }
 
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #3f4f45;
+    }
+
+    /* ---------- Hero image ---------- */
+    .hero {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: #3f4f45;
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* ---------- Desktop enhancements ---------- */
     @media (min-width: 768px) {
-      .accommodation {
+      nav ul {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .cards {
         grid-template-columns: repeat(3, 1fr);
       }
-    }
 
-    /* ---------- SCHEDULE ---------- */
-    .schedule-day {
-      margin-bottom: 1.5rem;
+      header h1 {
+        font-size: 3rem;
+      }
     }
-
-    .schedule-day summary {
-      font-size: 1.4rem;
-      font-weight: bold;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .schedule-day summary::after {
-      content: "+";
-      float: right;
-    }
-
-    .schedule-day[open] summary::after {
-      content: "–";
-    }
-
-    .schedule-day summary::-webkit-details-marker {
-      display: none;
-    }
-
-    /* ---------- FAQS ---------- */
-    .faq summary {
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .faq summary::after {
-      content: "+";
-      float: right;
-    }
-
-    .faq[open] summary::after {
-      content: "–";
-    }
-
-    .faq summary::-webkit-details-marker {
-      display: none;
-    }
-
   </style>
 </head>
 
 <body>
 
-<nav>
-  <ul>
-    <li><a href="#venue">Venue</a></li>
-    <li><a href="#accommodation">Accommodation</a></li>
-    <li><a href="#schedule">Weekend</a></li>
-    <li><a href="#faqs">FAQs</a></li>
-  </ul>
-</nav>
+  <!-- ---------- Header ---------- -->
+  <header>
+    <h1>Chris & Nika</h1>
+    <p>UK Wedding · August 15 2026 · Drovers Rest Farm</p>
 
-<header>
-  <h1>We’re Getting Married</h1>
-  <p>UK Celebration</p>
-  <img src="photos/uk-header.jpg" alt="Wedding Venue" class="hero">
-</header>
+    <!-- Optional hero image -->
+    
+    <img src="photos/Frontpage.jpg" alt="Wedding venue" class="hero">
+    
+  </header>
 
-<section id="venue">
-  <h2>The Venue</h2>
-  <p>A relaxed countryside weekend with good food, good people and alpacas.</p>
+<!-- ---------- Hamburger toggle ---------- -->
+ <input type="checkbox" id="menu-toggle" class=""menu-toggle">
+ <label for="menu-toggle" class ="menu-icon">MENU</label>
 
-  <div class="slider">
-    <img src="photos/venue1.jpg" alt="Venue view">
-    <img src="photos/venue2.jpg" alt="Barn">
-    <img src="photos/venue3.jpg" alt="Orchard">
+  <!-- ---------- Navigation ---------- -->
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">UK Wedding</a></li>
+      <li><a href="#schedule">Weekend</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#stay">Accommodation</a></li>
+       <li><a href="#faqs">FAQs</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="sa.html">SA Wedding</a></li>
+    </ul>
+  </nav>
+
+  <!-- ---------- Welcome ---------- -->
+  <section id="welcome">
+    <h2>Welcome</h2>
+    <p>
+      We’re so excited to celebrate our wedding with you.
+      This website has all the key details for the weekend (hopefully) —
+      timings, venue information, and where to stay.
+    </p>
+  </section>
+
+  <!-- ---------- Weekend Schedule ---------- -->
+<section class="weekend-schedule">
+  <h2>Weekend Schedule</h2>
+
+  <!-- Friday -->
+  <div class="schedule-day">
+    <h3>Friday – Arrival & Welcome</h3>
+    <ul>
+      <li>
+        <span class="time">3pm</span>
+        <span class="activity">Guest Arrival- We ask all of our weekend guests to arrive between 3 and 3:30pm.
+        </span>
+      </li>
+      <li>
+        <span class="time">4:30pm</span>
+        <span class="activity">Chris' Mystery Treasure Hunt</span>
+      </li>
+      <li>
+        <span class="time">6:30pm</span>
+        <span class="activity">A South African-inspired Supper and Singsong</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Saturday -->
+  <div class="schedule-day">
+    <h3>Saturday – Wedding Day</h3>
+    <ul>
+      <li>
+        <span class="time">Midday</span>
+        <span class="activity">Guest Arrival at the Courtyard</span>
+      </li>
+      <li>
+        <span class="time">1pm</span>
+        <span class="activity">Our Wedding Ceremony</span>
+      </li>
+      <li>
+        <span class="time">2pm</span>
+        <span class="activity">Drinks reception, photos and lawn games</span>
+      </li>
+      <li>
+        <span class="time">4pm</span>
+        <span class="activity">Wedding Breakfast</span>
+      </li>
+      <li>
+        <span class="time">6pm</span>
+        <span class="activity">Nick's Nervy Best Man Speech</span>
+      </li>
+      <li>
+        <span class="time">7pm</span>
+        <span class="activity">Our First Dance</span>
+      </li>
+       <li>
+        <span class="time">9pm</span>
+        <span class="activity">Evening Food and Party Time</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Sunday -->
+  <div class="schedule-day">
+    <h3>Sunday – Farewell</h3>
+    <ul>
+      <li>
+        <span class="time">10:30am</span>
+        <span class="activity">Breakfast over the Fire</span>
+      </li>
+      <li>
+        <span class="time">Midday</span>
+        <span class="activity">Departures</span>
+      </li>
+    </ul>
   </div>
 </section>
 
-<section id="accommodation">
-  <h2>Accommodation</h2>
-
-  <div class="accommodation">
-    <div>
-      <img src="photos/cottage.jpg" alt="Cottages">
-      <h3>Cottages</h3>
-      <p>On-site cottages for close family.</p>
+<!-- ---------- Venue ---------- -->
+  <section id="venue">
+    <h2>The Venue</h2>
+    <p>
+      Our wedding will take place at Drovers Rest Farm near to Hay on Wye. It is a beautiful venue and we can't wait to spend the weekend with you all (and the alpacas).</table>
+    </p>
+    <div class="venue-gallery">
+    <img src="photos/venue1.jpg" alt="Aerial View">
+    <img src="photos/venue2.jpg" alt="Flowers">
+    <img src="photos/venue3.jpg" alt="Courtyard Bar">
     </div>
+  </section>
 
-    <div>
-      <img src="photos/safari.jpg" alt="Safari tents">
-      <h3>Safari Tents</h3>
-      <p>Near the party barn.</p>
+  <!-- ---------- Accommodation ---------- -->
+  <section id="stay">
+    <h2>Accommodation</h2>
+
+    <div class="accommodation-grid">
+      <div class="accommodation-card">
+        <h3>Cottages</h3>
+        <img src="photos/cottage.jpg" alt="Cottages">
+        <p>On-site cottages for our wedding investors.</p>
+      </div>
+
+      <div class="accommodation-card">
+        <h3>Safari Tents</h3>
+        <img src="photos/safari-tent.jpg" alt="Safari Tents">
+        <p>There are 6 amazing safari tents which each sleep 4 people. Located near the rustic barn for easy access to the party.</p>
+      </div>
+
+      <div class="accommodation-card">
+        <h3>Bell Tents</h3>
+        <img src="photos/bell-tent.jpg" alt="Bell Tents">
+        <p>For those looking for glamping summer festival vibes we have 10 Bell Tents situated in a peaceful space by the moor. There are bespoke kitchen, shower and toilet facilities right outside the tents.</p>
+      </div>
     </div>
+  </section>
 
-    <div>
-      <img src="photos/bell.jpg" alt="Bell tents">
-      <h3>Bell Tents</h3>
-      <p>By the orchard for a peaceful night.</p>
-    </div>
-  </div>
-</section>
-
-<section id="schedule">
-  <h2>The Weekend</h2>
-
-  <details class="schedule-day">
-    <summary>Friday – Arrival & Welcome</summary>
-    <ul>
-      <li>4pm arrivals</li>
-      <li>Casual dinner & drinks</li>
-    </ul>
-  </details>
-
-  <details class="schedule-day">
-    <summary>Saturday – Wedding Day</summary>
-    <ul>
-      <li>Ceremony in the orchard</li>
-      <li>Barn dinner & dancing</li>
-    </ul>
-  </details>
-
-  <details class="schedule-day">
-    <summary>Sunday – Farewell</summary>
-    <ul>
-      <li>Brunch</li>
-      <li>Goodbyes</li>
-    </ul>
-  </details>
-</section>
-
-<section id="faqs">
+  <!-- ---------- FAQs ---------- -->
+  <section id="faqs">
   <h2>FAQs</h2>
 
-  <details class="faq">
-    <summary>What should I wear?</summary>
-    <p>Smart casual — think countryside chic.</p>
-  </details>
+  <div class="faq-list">
 
-  <details class="faq">
-    <summary>Can I bring children?</summary>
-    <p>Please contact us if you’re unsure.</p>
-  </details>
+    <details>
+      <summary>What should I wear?</summary>
+      <p>
+        We want people to feel comfortable and relaxed at our wedding. We ask for smart-casual for those in attendance on the Friday
+        and something a more formal for the wedding day. Chris will be wearing a beige suit and the Bridesmaids will be wearing X so please dodge these colours if at all possible. As a precaution against guests wearing white, the groomsmen may be given a red wine water pistol.
+      </p>
+    </details>
 
-  <details class="faq">
-    <summary>Is parking available?</summary>
-    <p>Yes, on-site parking is available.</p>
-  </details>
+    <details>
+      <summary>What time should I arrive?</summary>
+      <p>
+        For those coming on Friday please arrive between 3pm and 3:30pm. For those coming on Saturday, please arrive for 12:30pm in the Courtyard.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is there parking at the venue?</summary>
+      <p>
+        There is plenty of parking available at the venue. Please note that the parking is around a 10-minute walk from the Bell Tents so pack light or bring a trolley!
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I get to the venue?</summary>
+      <p>
+        The venue location can be found on <a href="https://maps.app.goo.gl/J2FUxmZ8y52kNPmZ8" target="_blank" rel="noopener">
+            Drovers Rest Farm
+        </a>
+        We are hoping to have smily helpers in place to guide you to the best spot in the car park.
+      </p>
+    </details>
+
+    <details>
+      <summary>What happens if it rains?</summary>
+      <p>
+        We get wet. In all seriousness, we have a well thought-through wet weather plan so the show will go on whatever the weather. If the forecast is wet, do bring wellies if you are in the tents.
+      </p>
+    </details>
+
+    <details>
+      <summary>Are children welcome?</summary>
+      <p>
+        As much as we love your little ones, this wedding is an adult-only affair. If this is going to cause you big issues then please do let us know at the earliest opportunity and we can try and figure out a solution. The same applies to dogs, horses and any other pets.
+      </p>
+    </details>
+
+     <details>
+      <summary>Can I bring a plus one?</summary>
+      <p>
+        The short answer is no. It is really important to us that we know everybody there on our wedding day so we will be naming all of the invited guests on the invites.
+      </p>
+    </details>
+
+    <details>
+      <summary>Will food and drinks be provided?</summary>
+      <p>
+        The all important question. We will be providing: evening meal (Friday), items for self-cooked breakfast (Saturday), Wedding Breakfast (Saturday), Late-Night Food (Saturday) and Fire-cooked Breakfast (Sunday). We encourage all hungry guests to bring additional snacks and soft drinks.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I bring alcohol?</summary>
+      <p>
+        No! It is an important part of our agreement with the venue that only alcohol purchased on the premises can be consumed. Any breaches of this may result in the wedding being cancelled. There is a cash bar that will be open throughout the weekend with a wide selection of beers/ciders and a great selection of South African wines.
+      </p>
+    </details>
+
+    <details>
+      <summary>Do you have a gift registry?</summary>
+      <p>
+        Your presence at our special day is a gift in itself. If you do wish to give something then a contribution to our honeymoon would mean the world to us.
+      </p>
+    </details>
+
+    <details>
+      <summary>What if I have any other questions?</summary>
+      <p>
+        For any other questions please just drop us a text or email us at <a href="mailto:chrisandnikawedding@gmail.com"> chrisandnikawedding@gmail.com
+
+        </a>
+      </p>
+    </details>
+
+  </div>
 </section>
+
+  <!-- ---------- RSVP ---------- -->
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>
+      Please let us know if you can attend by completing the RSVP form.
+    </p>
+    <p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAYeNsW96VpoXF7V4Ooy0svY9829PR6T8S4SEKk1AK6P-cAA/viewform?usp=header"
+        class="rsvp-button"
+        target="_blank">
+      RSVP Here
+    </a>
+    </p>
+  </section>
+
+<!-- ---------- Rustic Styling CSS ---------- -->
+<style>
+  .weekend-schedule {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem 1rem;
+    background: #fdfaf4;
+    border: 2px solid #e4e0d8;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    font-family: 'Georgia', serif;
+    color: #3f4f45;
+  }
+
+  .weekend-schedule h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #5b6a5d;
+    position: relative;
+  }
+
+  .weekend-schedule h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #a7b3a5;
+    margin: 0.5rem auto 0;
+  }
+
+  .schedule-day {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f7f3ec;
+    border-left: 4px solid #a7b3a5;
+    border-radius: 4px;
+  }
+
+  .schedule-day h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #d1cfc5;
+    padding-bottom: 0.5rem;
+    color: #4a5a4f;
+  }
+
+  .schedule-day ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .schedule-day li {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    align-items: baseline;
+  }
+
+  .time {
+    font-weight: bold;
+    min-width: 80px;
+    color: #6b7a6f;
+  }
+
+  .activity {
+    flex: 1;
+  }
+
+  /* Venue Image Slider */
+  .venue-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    }
+
+    .venue-gallery img {
+        flex: 0 0 85%;
+        max-width: 85%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 8px;
+        scroll-snap-align: center;
+        }
+
+/* Desktop Adjustment for venue slider*/
+@media (min-width: 768px) {
+    .venue-gallery img {
+        flex: 0 0 30%;
+        max-width: 30%;
+        height: 280px;
+        }
+        }
+.rsvp-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #5a4a42;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* ---------- Accommodation cards ---------- */
+.accommodation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.accommodation-card {
+  background: #fdfaf4;
+  border: 2px solid #e4e0d8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.accommodation-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.accommodation-card h3 {
+  margin: 1rem;
+  color: #4a5a4f;
+}
+
+.accommodation-card p {
+  margin: 0 1rem 1.5rem;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .accommodation-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- FAQ accordion ---------- */
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-list details {
+  background: #fdfaf4;
+  border: 2px solid #e4e0d8;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.faq-list summary {
+  font-weight: bold;
+  color: #4a5a4f;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  float: right;
+  font-weight: bold;
+}
+
+.faq-list details[open] summary::after {
+  content: "–";
+}
+
+.faq-list p {
+  margin-top: 1rem;
+  color: #3f4f45;
+}
+
+  /* Mobile-friendly tweaks */
+  @media (min-width: 768px) {
+    .schedule-day {
+      padding: 1.5rem;
+    }
+    .schedule-day li {
+      gap: 1.5rem;
+    }
+  }
+</style>
+
+  <!-- ---------- Footer ---------- -->
+  <footer>
+    <p>We can’t wait to celebrate with you 🤍</p>
+  </footer>
 
 </body>
 </html>
